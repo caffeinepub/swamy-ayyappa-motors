@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/assets/fonts/PlayfairDisplay.woff2") format("woff2");
+  font-weight: 400 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Dark automotive theme */
+    --background: 0.14 0.008 25;
+    --foreground: 0.93 0.01 75;
+    --card: 0.18 0.008 25;
+    --card-foreground: 0.93 0.01 75;
+    --popover: 0.2 0.008 25;
+    --popover-foreground: 0.93 0.01 75;
+
+    /* Deep red/maroon primary */
+    --primary: 0.44 0.19 22;
+    --primary-foreground: 0.97 0.005 75;
+
+    /* Dark panels secondary */
+    --secondary: 0.22 0.008 25;
+    --secondary-foreground: 0.93 0.01 75;
+
+    --muted: 0.22 0.008 25;
+    --muted-foreground: 0.6 0.01 75;
+
+    /* Gold accent */
+    --accent: 0.74 0.14 75;
+    --accent-foreground: 0.12 0.005 25;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.97 0.005 75;
+
+    --border: 0.28 0.01 25;
+    --input: 0.25 0.01 25;
+    --ring: 0.44 0.19 22;
+
+    --chart-1: 0.44 0.19 22;
+    --chart-2: 0.74 0.14 75;
+    --chart-3: 0.55 0.15 200;
+    --chart-4: 0.65 0.18 140;
+    --chart-5: 0.6 0.18 300;
+
+    --sidebar: 0.16 0.008 25;
+    --sidebar-foreground: 0.93 0.01 75;
+    --sidebar-primary: 0.44 0.19 22;
+    --sidebar-primary-foreground: 0.97 0.005 75;
+    --sidebar-accent: 0.22 0.008 25;
+    --sidebar-accent-foreground: 0.93 0.01 75;
+    --sidebar-border: 0.28 0.01 25;
+    --sidebar-ring: 0.44 0.19 22;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", "General Sans", system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+}

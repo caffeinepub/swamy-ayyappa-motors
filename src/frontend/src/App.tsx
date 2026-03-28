@@ -17,7 +17,6 @@ import AdminLoginPage from "./pages/AdminLoginPage";
 import BookServicePage from "./pages/BookServicePage";
 import HomePage from "./pages/HomePage";
 import TrackServicePage from "./pages/TrackServicePage";
-import VehiclesPage from "./pages/VehiclesPage";
 
 const rootRoute = createRootRoute({
   component: () => (
@@ -39,12 +38,6 @@ const homeRoute = createRoute({
   getParentRoute: () => customerLayoutRoute,
   path: "/",
   component: HomePage,
-});
-
-const vehiclesRoute = createRoute({
-  getParentRoute: () => customerLayoutRoute,
-  path: "/vehicles",
-  component: VehiclesPage,
 });
 
 const bookServiceRoute = createRoute({
@@ -90,12 +83,7 @@ const adminBookingsRoute = createRoute({
 });
 
 const routeTree = rootRoute.addChildren([
-  customerLayoutRoute.addChildren([
-    homeRoute,
-    vehiclesRoute,
-    bookServiceRoute,
-    trackRoute,
-  ]),
+  customerLayoutRoute.addChildren([homeRoute, bookServiceRoute, trackRoute]),
   adminLoginRoute,
   adminLayoutRoute.addChildren([
     adminDashboardRoute,

@@ -34,21 +34,21 @@ export default function HomePage() {
               Your Trusted Four-Wheeler Workshop in Karimnagar
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/vehicles" data-ocid="hero.primary_button">
+              <Link to="/book-service" data-ocid="hero.primary_button">
                 <Button
                   size="lg"
                   className="bg-primary hover:bg-maroon-light text-primary-foreground shadow-maroon px-8"
                 >
-                  View Vehicles
+                  Book Service
                 </Button>
               </Link>
-              <Link to="/book-service" data-ocid="hero.secondary_button">
+              <Link to="/track" data-ocid="hero.secondary_button">
                 <Button
                   size="lg"
                   variant="outline"
                   className="border-accent text-accent hover:bg-accent hover:text-accent-foreground px-8"
                 >
-                  Book Service
+                  Track Service
                 </Button>
               </Link>
             </div>

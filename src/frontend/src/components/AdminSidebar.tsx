@@ -1,12 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link, useRouter, useRouterState } from "@tanstack/react-router";
-import {
-  Bike,
-  CalendarCheck,
-  Car,
-  LayoutDashboard,
-  LogOut,
-} from "lucide-react";
+import { CalendarCheck, Car, LayoutDashboard, LogOut } from "lucide-react";
 import { useInternetIdentity } from "../hooks/useInternetIdentity";
 
 const sidebarLinks = [
@@ -35,7 +29,7 @@ export default function AdminSidebar() {
       <div className="p-6 border-b border-sidebar-border">
         <Link to="/admin/dashboard" className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-            <Bike className="w-4 h-4 text-primary-foreground" />
+            <Car className="w-4 h-4 text-primary-foreground" />
           </div>
           <div>
             <span className="font-serif font-bold text-sm text-sidebar-foreground block leading-none">
